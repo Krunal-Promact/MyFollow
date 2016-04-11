@@ -17,43 +17,43 @@ namespace MyFollow.Models
         /// Short Description Of The Product
         /// </summary>
         [StringLength(500)]
-        public string Intro { get; set; }
+        public string Introduction { get; set; }
 
         /// <summary>
         /// Long Description Of The Product
         /// </summary>
         [StringLength(1000)]
-        public string Detail { get; set; }
+        public string Details { get; set; }
 
         /// <summary>
         /// Name Of The First Uploaded Media
         /// </summary>
         [StringLength(50)]
-        public string Media1 { get; set; }
+        public string MediaNameOne { get; set; }
 
         /// <summary>
         /// Name Of The Second Uploaded Media
         /// </summary>
         [StringLength(50)]
-        public string Media2 { get; set; }
+        public string MediaNameTwo { get; set; }
 
         /// <summary>
         /// Name Of The Third Uploaded Media
         /// </summary>
         [StringLength(50)]
-        public string Media3 { get; set; }
+        public string MediaNameThree { get; set; }
 
         /// <summary>
         /// Name Of The Fourth Uploaded Media
         /// </summary>
         [StringLength(50)]
-        public string Media4 { get; set; }
+        public string MediaNameFour { get; set; }
 
         /// <summary>
         /// Name Of The Fifth Uploaded Media
         /// </summary>
         [StringLength(50)]
-        public string Media5 { get; set; }
+        public string MediaNameFive { get; set; }
 
         /// <summary>
         /// Reference Id Of The Product Owner

@@ -11,13 +11,13 @@ namespace MyFollow.Models
         /// Street 1 Of Address
         /// </summary>
         [StringLength(50)]
-        public string Street1 { get; set; }
+        public string StreetOne { get; set; }
 
         /// <summary>
         /// Street 2 Of Address
         /// </summary>
         [StringLength(50)]
-        public string Street2 { get; set; }
+        public string StreetTwo { get; set; }
 
         /// <summary>
         /// City Of Address
