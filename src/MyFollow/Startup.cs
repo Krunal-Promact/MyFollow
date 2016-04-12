@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,10 +27,17 @@ namespace MyFollow
         {
             services.AddMvc();
             services.AddEntityFramework().AddSqlServer().AddDbContext<MyFollowDbContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            services.AddIdentity<MyFollowUser, IdentityRole>(config=> 
+            {
+                config.User.RequireUniqueEmail = true;
+            })
+            .AddEntityFrameworkStores<MyFollowDbContext>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment environment)
         {
+            app.UseIdentity();
+
             if (environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

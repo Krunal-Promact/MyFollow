@@ -1,11 +1,12 @@
-﻿using Microsoft.Data.Entity;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Data.Entity;
 
 namespace MyFollow.Models
 {
     /// <summary>
     /// My Follow Database Context
     /// </summary>
-    public class MyFollowDbContext : DbContext
+    public class MyFollowDbContext : IdentityDbContext
     {
         /// <summary>
         /// Product Owner Table

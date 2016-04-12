@@ -2,14 +2,16 @@ using System;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
+using Microsoft.Data.Entity.Migrations;
 using MyFollow.Models;
 
 namespace MyFollow.Migrations
 {
     [DbContext(typeof(MyFollowDbContext))]
-    partial class MyFollowDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160412044622_identity")]
+    partial class identity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
