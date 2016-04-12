@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My Follow</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <!-- Js -->
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/system.js"></script>
+    <script src="~/js/Rx.js"></script>
+    <script src="~/js/angular2/angular2.dev.js"></script>
+    <script src="~/js/angular2/angular2-polyfills.js"></script>
+    <script src="~/js/angular2/http.dev.js"></script>
+    <script src="~/js/angular2/router.dev.js"></script>
+</head>
+<body>
+    <!-- Configure SystemJS -->
+    <script>
+            System.config({
+                packages: {
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            System.import('app/main')
+                  .then(null, console.error.bind(console));
+    </script>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -38,6 +38,8 @@ namespace MyFollow
         {
             app.UseIdentity();
 
+            app.UseFileServer();
+
             if (environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
